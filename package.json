@@ -1,0 +1,39 @@
+{
+  "name": "next-sass-starter",
+  "title": "Next.js Sass Starter",
+  "description": "Use Sass to start your Next.js app with CSS superpowers!",
+  "version": "0.1.0",
+  "author": {
+    "name": "Colby Fayock",
+    "email": "hello@colbyfayock.com",
+    "url": "https://twitter.com/colbyfayock"
+  },
+  "dependencies": {
+    "next": "10.0.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "sass": "^1.32.0"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "next js",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "homepage": "https://next-sass-starter.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbyfayock/next-sass-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/colbyfayock/next-sass-starter/issues"
+  }
+}
