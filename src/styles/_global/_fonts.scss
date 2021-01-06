@@ -1,0 +1,43 @@
+// FONT STACK
+// --------------------------------------------------------------------------------------------
+
+// Using the implementation of this mixin provided by topcoder-react-utils
+// is not loading fonts correctly.  This may be a webpack related issue.
+@mixin font-family($font-name, $font-weight, $font-style, $font-url, $font-file) {
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('#{$font-url}#{$font-file}.eot');
+    src:
+      url('#{$font-url}#{$font-file}.eot?#iefix') format('embedded-opentype'),
+      url('#{$font-url}#{$font-file}.woff') format('woff'),
+      url('#{$font-url}#{$font-file}.ttf') format('truetype'),
+      url('#{$font-url}#{$font-file}.svg##{$font-name}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+/* OpenSans font is being used by the new design of community pages */
+@include font-family('Open Sans', 300, normal, '../../assets/fonts/opensans/', 'opensans-light-webfont');
+@include font-family('Open Sans', 300, italic, '../../assets/fonts/opensans/', 'opensans-lightitalic-webfont');
+@include font-family('Open Sans', 400, normal, '../../assets/fonts/opensans/', 'opensans-regular-webfont');
+@include font-family('Open Sans', 400, italic, '../../assets/fonts/opensans/', 'opensans-italic-webfont');
+@include font-family('Open Sans', 600, normal, '../../assets/fonts/opensans/', 'opensans-semibold-webfont');
+@include font-family('Open Sans', 600, italic, '../../assets/fonts/opensans/', 'opensans-semibolditalic-webfont');
+@include font-family('Open Sans', 700, normal, '../../assets/fonts/opensans/', 'opensans-bold-webfont');
+@include font-family('Open Sans', 700, italic, '../../assets/fonts/opensans/', 'opensans-bolditalic-webfont');
+@include font-family('Open Sans', 800, normal, '../../assets/fonts/opensans/', 'opensans-extrabold-webfont');
+@include font-family('Open Sans', 800, italic, '../../assets/fonts/opensans/', 'opensans-extrabolditalic-webfont');
+
+/* Awesome font */
+@include font-family('FontAwesome', normal, normal, '../../assets/fonts/font-awesome/', 'fontawesome-webfont');
+
+/* Barlow and BarlowCondensed is being used by TCO19 */
+@include font-family('Barlow', 400, normal, '../../assets/fonts/Barlow/', 'Barlow-Regular');
+@include font-family('Barlow', 500, normal, '../../assets/fonts/Barlow/', 'Barlow-Medium');
+@include font-family('Barlow', 600, normal, '../../assets/fonts/Barlow/', 'Barlow-Semi-Bold');
+@include font-family('Barlow', 700, normal, '../../assets/fonts/Barlow/', 'Barlow-Bold');
+@include font-family('BarlowCondensed', 400, normal, '../../assets/fonts/BarlowCondensed/', 'BarlowCondensed-Regular');
+@include font-family('BarlowCondensed', 500, normal, '../../assets/fonts/BarlowCondensed/', 'BarlowCondensed-Medium');
+@include font-family('BarlowCondensed', 600, normal, '../../assets/fonts/BarlowCondensed/', 'BarlowCondensed-SemiBold');
+@include font-family('BarlowCondensed', 700, normal, '../../assets/fonts/BarlowCondensed/', 'BarlowCondensed-Bold');

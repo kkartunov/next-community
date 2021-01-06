@@ -1,18 +1,25 @@
 {
-  "name": "next-sass-starter",
-  "title": "Next.js Sass Starter",
-  "description": "Use Sass to start your Next.js app with CSS superpowers!",
+  "name": "next-topcoder-community",
+  "title": "Next.js Renderer for Topcoder Community",
+  "description": "Static and ultra-fast Topcoder Community",
   "version": "0.1.0",
+  "private": true,
   "author": {
-    "name": "Colby Fayock",
-    "email": "hello@colbyfayock.com",
-    "url": "https://twitter.com/colbyfayock"
+    "name": "Kiril Kartunov",
+    "email": "kiril.kartunov@gmail.com",
+    "url": "http://kkartunov.now.sh/"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "lodash": "^4.17.20",
     "next": "10.0.4",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
+    "react-css-super-themr": "^2.3.0",
     "react-dom": "17.0.1",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "topcoder-react-ui-kit": "^2.0.1",
+    "topcoder-react-utils": "^0.7.9"
   },
   "keywords": [
     "next",
@@ -20,20 +27,30 @@
     "next js",
     "sass",
     "scss",
-    "css"
+    "css",
+    "topcoder"
   ],
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:scss": "stylelint **/*.scss --syntax scss",
+    "lint": "npm run lint:js && npm run lint:scss"
   },
-  "homepage": "https://next-sass-starter.vercel.app",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/next-sass-starter"
+    "url": ""
   },
-  "bugs": {
-    "url": "https://github.com/colbyfayock/next-sass-starter/issues"
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
