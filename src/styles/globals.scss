@@ -7,11 +7,10 @@
  * your custom stylesheets you should import mixins.scss.
  */
 
+@import "~flag-icon-css/css/flag-icon.css";
 @import "mixins";
 @import "_global/reset";
 @import "_global/fonts";
 @import "_global/typography";
-@import "_global/buttons";
-@import "_global/checkboxes";
 @import "_global/flexbox";
 @import "_global/forms";

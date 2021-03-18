@@ -1,0 +1,69 @@
+@import "~styles/mixins";
+@import "~styles/default";
+
+.contentWrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: $screen-md;
+  padding: 15px;
+  color: $tc-black;
+
+  @include xs-to-sm {
+    flex-direction: column;
+  }
+}
+
+.container {
+  align-content: center;
+  background: white;
+  padding: 10px 0;
+
+  &:nth-child(even) .contentWrapper {
+    flex-direction: row-reverse;
+
+    @include xs-to-sm {
+      flex-direction: column;
+    }
+  }
+}
+
+.content {
+  @include tc-typography;
+  @include default-headers;
+
+  flex: 1;
+  padding: 15px;
+  color: $tc-black;
+
+  code {
+    background-color: $tc-gray-neutral-light;
+    padding: 0.2em 0.4em;
+  }
+  
+  pre {
+    code {
+      background-color: transparent;
+      color: #2a2a2a;
+    }
+  }
+  
+  :global {
+    .hljs-comment::after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+  
+  strong a {
+    font-weight: 600 !important;
+  }
+}
+
+.image {
+  flex: 1;
+  margin: 15px;
+
+  img {
+    width: 100%;
+  }
+}
