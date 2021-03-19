@@ -7,6 +7,7 @@
  */
 import PT from 'prop-types';
 import React from 'react';
+import { template } from 'lodash';
 
 import md from 'utils/markdown';
 
@@ -32,8 +33,11 @@ class MarkdownRenderer extends React.Component {
 
   renderElements(markdown) {
     if (markdown) {
+      const compiled = template(markdown, { variable: 'profile' });
+      // Add profile here when implemented!
+      const interpolated = compiled({});
       this.setState({
-        elements: md(markdown),
+        elements: md(interpolated),
       });
     }
   }
