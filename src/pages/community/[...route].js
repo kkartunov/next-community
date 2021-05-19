@@ -4,12 +4,14 @@ import ApiService from 'services/contentful'
 import logger from 'services/logger'
 import { loadRoute } from 'utils/helpers'
 import TopcoderFooter from 'components/TopcoderFooter';
+// import TopcoderHeader from 'components/TopcoderHeader';
 
 const Community = (props) => {
   return props.error ?
     <Error statusCode={props.error.code} />
     : <>
-      {Route(props)}
+      {/* <TopcoderHeader /> */}
+        {Route(props)}
       <TopcoderFooter />
     </>
 }

@@ -20,6 +20,7 @@
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0",
     "moment": "^2.29.1",
+    "navigation-component": "topcoder-platform/navigation-component#next-js",
     "next": "10.0.4",
     "prop-types": "^15.7.2",
     "react": "17.0.1",
@@ -63,6 +64,8 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
+    "react-hot-loader": "^4.13.0",
+    "react-test-renderer": "^17.0.2",
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0"
   }
