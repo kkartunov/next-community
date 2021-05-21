@@ -1,9 +1,10 @@
 /**
  * Themed Viewport Component
  */
+/* global window */
 import { get, map, defaults } from 'lodash'
 import PT from 'prop-types';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { themr } from 'react-css-super-themr';
 import logger from 'services/logger'
 import AOS from 'aos';
@@ -42,6 +43,15 @@ const ViewportContent = (content) => {
 const Viewport = ({
   viewport,
 }) => {
+  // trigger render on window resize event
+  // eslint-disable-next-line no-unused-vars
+  const [width, setWidth] = useState(0); // default width, detect on server.
+  const handleResize = () => setWidth(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
+  // build the viewport
   const animateOnScroll = get(viewport, 'fields.animationOnScroll.fields')
   const theme = THEMES[viewport.fields.theme || 'Column'];
   let extraStylesForContainer = get(viewport, 'fields.extraStylesForContainer')
@@ -80,7 +90,7 @@ const Viewport = ({
   }
   return (
     <div id={viewport.sys.id} className={theme.container} style={fixStyle(extraStylesForContainer)} role="main">
-      { ViewportContent(viewport.fields.content) }
+      { ViewportContent(viewport.fields.content)}
     </div>
   );
 };

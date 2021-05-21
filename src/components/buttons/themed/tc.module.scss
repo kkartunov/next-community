@@ -8,6 +8,7 @@
   text-transform: uppercase !important;
   margin: 0 !important;
   white-space: nowrap !important;
+  display: inline-flex !important;
 }
 
 @mixin primary-green {
@@ -109,6 +110,7 @@
   text-transform: uppercase !important;
   margin: 0 !important;
   white-space: nowrap !important;
+  display: inline-flex !important;
 }
 
 @mixin secondary-gray {
@@ -136,6 +138,7 @@
   text-transform: uppercase !important;
   margin: 0 !important;
   white-space: nowrap !important;
+  display: inline-flex !important;
 }
 
 @mixin warn-red {
@@ -359,4 +362,5 @@
   border: none !important;
   text-decoration: none !important;
   color: #fafafb !important;
+  display: inline-flex !important;
 }
