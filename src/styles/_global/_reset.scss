@@ -25,6 +25,10 @@ html {
 body {
   min-height: 100%;
   margin: 0;
+
+  &.scrolling-disabled-by-modal {
+      overflow: hidden;
+    }
 }
 
 a {

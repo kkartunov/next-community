@@ -67,8 +67,6 @@ export default class ContentfulTabs extends Component {
     const { tabIndex } = this.state;
     const theme = TAB_THEMES[tabs.fields.theme || 'Default'];
 
-    console.log('in Tabs', this.props, this.state)
-
     return (
       <Tabs
         className={theme.container}

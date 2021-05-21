@@ -15,13 +15,11 @@ import hljs from 'highlight.js';
 import ReactHtmlParser from 'react-html-parser';
 import sub from 'markdown-it-sub';
 import sup from 'markdown-it-sup';
-import 'highlight.js/styles/github.css';
-
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
-import tc from 'components/buttons/themed/tc.module.scss';
-
 import Highlighter from './highlighter';
+import 'highlight.js/styles/github.css';
+import tc from 'components/buttons/themed/tc.module.scss';
+import ContentfulModal from 'components/ContentfulModal';
 
 /** Themes for buttons
  * those overwrite PrimaryButton style to match achieve various styles.
@@ -60,6 +58,7 @@ const customComponents = {
       },
     };
   },
+  Modal: attrs => ({ type: ContentfulModal, props: attrs })
 };
 
 /**

@@ -7,6 +7,7 @@
   width: 413px;
   flex-direction: column !important;
   padding: 0;
+  display: flex;
 }
 
 .container {
@@ -20,6 +21,7 @@
 .content {
   padding: 17px 40px 30px 40px;
   color: $tc-white;
+  flex: 1;
 
   h1,
   h2,
@@ -40,6 +42,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
+    margin: 10px 0;
 
     @include xs-to-sm {
       font-size: 20px;

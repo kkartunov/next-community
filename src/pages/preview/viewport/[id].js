@@ -11,7 +11,6 @@ const ViewportPreview = (props) => {
     return <div>Loading...</div>
   }
   const { viewport } = props;
-  console.log('ViewportPreview', props);
   return props.error ?
     <Error statusCode={props.error.code} />
     : <>
@@ -26,7 +25,6 @@ const ViewportPreview = (props) => {
 }
 
 export async function getStaticProps(context) {
-  console.log('ViewportPreview getStaticProps', context)
   // get us a client to work with
   const api = new ApiService(
     process.env.CONTENTFUL_CDN_PREVIEW_KEY,

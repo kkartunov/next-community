@@ -1,0 +1,36 @@
+@import '~styles/mixins';
+
+.overlay {
+  background: #ebebeb;
+  border: none;
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  outline: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 998;
+}
+
+.container {
+  background: #fff;
+  box-shadow: 0 0 14px 1px rgba(38, 38, 40, 0.15);
+  border-radius: 4;
+  max-height: 95vh;
+  max-width: $screen-md;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  @include xs-to-lg {
+    max-width: 95vw;
+  }
+
+  @include sm-to-xl {
+    padding: 15px;
+  }
+}
