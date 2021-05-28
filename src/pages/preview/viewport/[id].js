@@ -35,6 +35,7 @@ export async function getStaticProps(context) {
   try {
     // get the viewport
     const viewport = await api.queryEntries({
+      'content_type': 'viewport',
       'sys.id': context.params.id,
       include: 10
     })
