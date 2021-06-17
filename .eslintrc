@@ -8,7 +8,8 @@
     "react/prop-types": 0
   },
   "globals": {
-    "React": "writable"
+    "React": "writable",
+    "window": "writable"
   },
   "parserOptions": {
     "sourceType": "module",

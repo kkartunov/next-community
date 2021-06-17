@@ -1,7 +1,6 @@
 /**
  * Themed Viewport Component
  */
-/* global window */
 import { get, map, defaults } from 'lodash'
 import PT from 'prop-types';
 import React, { useState, useEffect } from 'react';
