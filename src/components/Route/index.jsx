@@ -15,6 +15,7 @@ const Route = (props) => {
   return (
     <>
       <Head>
+        <html lang="en" />
         <title>{fields.pageTitle}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={fields.description}></meta>
