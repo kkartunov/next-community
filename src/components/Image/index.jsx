@@ -117,7 +117,7 @@ export class ImageInner extends React.Component {
           image.fields.animateOnScroll ? (
             <Image
               src={`https:${imageUrl}`}
-              alt={image.alt || image.name}
+              alt={image.fields.alt || image.fields.name}
               style={imgStyle}
               data-aos={image.fields.animateOnScroll}
               data-aos-once={image.fields.animateOnScrollOnce}
@@ -136,7 +136,7 @@ export class ImageInner extends React.Component {
           ) : (
             <Image
               src={`https:${imageUrl}`}
-              alt={image.alt || image.name}
+              alt={image.fields.alt || image.fields.name}
               style={imgStyle}
               loader={myLoader}
               width={imageDetails.width}
