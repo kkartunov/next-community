@@ -16,10 +16,7 @@ const ViewportPreview = (props) => {
     : <>
       <Head>
         <title>{`Preview of ${viewport.fields.name} | ${viewport.sys.id}`}</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={fields.description}></meta>
-        <link rel="icon" href="/cropped-TC-Icon-32x32.png" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+        <meta name="description" content={`Preview of ${viewport.fields.name} | ${viewport.sys.id}`} />
       </Head>
       <Viewport viewport={viewport} />
     </>
