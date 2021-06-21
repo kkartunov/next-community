@@ -55,7 +55,7 @@ export default function Button({
         enforceA={enforceA}
         onClick={onClick}
         onMouseDown={onMouseDown}
-        openNewTab={openNewTab}
+        openNewTab={openNewTab === 'true'}
         replace={replace}
         to={to}
         style={style}
@@ -90,7 +90,7 @@ Button.defaultProps = {
   enforceA: false,
   onClick: null,
   onMouseDown: null,
-  openNewTab: false,
+  openNewTab: null,
   replace: false,
   size: null,
   theme: defaultTheme,
@@ -106,7 +106,7 @@ Button.propTypes = {
   enforceA: PT.bool,
   onClick: PT.func,
   onMouseDown: PT.func,
-  openNewTab: PT.bool,
+  openNewTab: PT.string,
   replace: PT.bool,
   size: PT.string,
   theme: PT.shape({

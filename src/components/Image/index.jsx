@@ -10,12 +10,17 @@ import { get } from 'lodash';
 import { themr } from 'react-css-super-themr';
 import { fixStyle } from 'utils/helpers'
 import SVG from 'react-inlinesvg';
+import Image from 'next/image';
 
 // AOS
 import AOS from 'aos';
 
 import LoadingIndicator from 'components/LoadingIndicator';
 import defaultTheme from './themes/default.module.scss';
+
+const myLoader = ({ src }) => {
+  return src.indexOf('http') === 0 ? src : `https:${src}`;
+}
 
 export class ImageInner extends React.Component {
   constructor(props) {
@@ -69,11 +74,30 @@ export class ImageInner extends React.Component {
     } = this.props;
 
     const imageUrl = get(image, 'fields.source.fields.file.url');
+    const imageDetails = get(image, 'fields.source.fields.file.details.image');
     const clipSvgUrl = get(image, 'fields.clipSvg.fields.file.url');
     const imgStyle = image.fields.extraStylesForImage ? fixStyle(image.fields.extraStylesForImage) : {};
     if (clipSvgUrl) {
       imgStyle.display = 'none';
     }
+    const shimmer = (w, h) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <radialGradient id="g">
+      <stop stop-color="#e9e9e9" offset="20%" />
+      <stop stop-color="#f9f9f9" offset="50%" />
+      <stop stop-color="#e9e9e9" offset="70%" />
+    </radialGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#e9e9e9" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`;
+
+    const toBase64 = (str) =>
+      typeof window === 'undefined'
+        ? Buffer.from(str).toString('base64')
+        : window.btoa(str)
 
     return (
       <div
@@ -91,8 +115,8 @@ export class ImageInner extends React.Component {
         )}
         {
           image.fields.animateOnScroll ? (
-            <img
-              src={imageUrl}
+            <Image
+              src={`https:${imageUrl}`}
               alt={image.alt || image.name}
               style={imgStyle}
               data-aos={image.fields.animateOnScroll}
@@ -103,12 +127,22 @@ export class ImageInner extends React.Component {
               data-aos-mirror={image.fields.animateOnScrollMirror}
               data-aos-anchor-placement={image.fields.animateOnScrollAnchor}
               data-aos-offset={image.fields.animateOnScrollOffset}
+              loader={myLoader}
+              width={imageDetails.width}
+              height={imageDetails.height}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(imageDetails.width, imageDetails.height))}`}
             />
           ) : (
-            <img
-              src={imageUrl}
+            <Image
+              src={`https:${imageUrl}`}
               alt={image.alt || image.name}
               style={imgStyle}
+              loader={myLoader}
+              width={imageDetails.width}
+              height={imageDetails.height}
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(imageDetails.width, imageDetails.height))}`}
             />
           )
         }
