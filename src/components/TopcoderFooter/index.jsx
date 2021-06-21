@@ -53,7 +53,7 @@ export default function TopcoderFooter() {
     <div className={defaultTheme.footer} role="contentinfo">
       <div className={defaultTheme['footer-wrap']}>
         <div className={defaultTheme['logo-wrap']}>
-          <Image src="/icons/TC-logo-inverted.svg" height={30} width={79} />
+          <Image src="/icons/TC-logo-inverted.svg" height={30} width={79} alt="Topcoder inverted logo" />
         </div>
         <div className={defaultTheme['navi-links']}>
           <div className={defaultTheme['navi-col']}>
@@ -119,11 +119,11 @@ export default function TopcoderFooter() {
             <h4 className={defaultTheme['navi-col-title']}>FOLLOW US</h4>
             <div className={defaultTheme['sep-line']} />
             <div className={defaultTheme['social-icons']}>
-              <a href="https://www.facebook.com/topcoder/" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-fb.svg" height={24} width={24} /></a>
-              <a href="https://www.youtube.com/c/TopcoderOfficial" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-youtube.svg" height={24} width={24} /></a>
-              <a href="https://www.linkedin.com/company/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-linkedln.svg" height={24} width={24} /></a>
-              <a href="https://twitter.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-twitter.svg" height={24} width={24} /></a>
-              <a href="https://www.instagram.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-instagram.svg" height={24} width={24} /></a>
+            <a href="https://www.facebook.com/topcoder/" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-fb.svg" height={24} width={24} alt="Facebook icon" /></a>
+            <a href="https://www.youtube.com/c/TopcoderOfficial" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-youtube.svg" height={24} width={24} alt="Youtube icon" /></a>
+            <a href="https://www.linkedin.com/company/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-linkedln.svg" height={24} width={24} alt="Linkedin icon" /></a>
+            <a href="https://twitter.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-twitter.svg" height={24} width={24} alt="Twitter icon" /></a>
+            <a href="https://www.instagram.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-instagram.svg" height={24} width={24} alt="Instagram icon" /></a>
             </div>
           </div>
         </div>
@@ -143,11 +143,11 @@ export default function TopcoderFooter() {
         </div>
         <div className={defaultTheme['mobile-only']}>
           <div className={defaultTheme['social-icons']}>
-            <a href="https://www.facebook.com/topcoder/" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-fb.svg" height={24} width={24} /></a>
-            <a href="https://www.youtube.com/c/TopcoderOfficial" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-youtube.svg" height={24} width={24} /></a>
-            <a href="https://www.linkedin.com/company/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-linkedln.svg" height={24} width={24} /></a>
-            <a href="https://twitter.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-twitter.svg" height={24} width={24} /></a>
-            <a href="https://www.instagram.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-instagram.svg" height={24} width={24} /></a>
+            <a href="https://www.facebook.com/topcoder/" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-fb.svg" height={24} width={24} alt="Facebook icon" /></a>
+            <a href="https://www.youtube.com/c/TopcoderOfficial" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-youtube.svg" height={24} width={24} alt="Youtube icon" /></a>
+            <a href="https://www.linkedin.com/company/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-linkedln.svg" height={24} width={24} alt="Linkedin icon" /></a>
+            <a href="https://twitter.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-twitter.svg" height={24} width={24} alt="Twitter icon" /></a>
+            <a href="https://www.instagram.com/topcoder" target="_blank" rel="noopener noreferrer"><Image src="/icons/icon-instagram.svg" height={24} width={24} alt="Instagram icon" /></a>
           </div>
         </div>
         <div className={defaultTheme.bottom}>
