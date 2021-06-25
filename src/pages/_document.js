@@ -8,6 +8,7 @@ class MyDocument extends Document {
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="icon" href="/cropped-TC-Icon-32x32.png" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+          <link rel="preload" as="font" />
         </Head>
         <body>
           <Main />
